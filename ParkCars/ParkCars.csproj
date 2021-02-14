@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A8885E3-058F-48AF-9C39-9ABC214D0BD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ParkCars</RootNamespace>
+    <AssemblyName>ParkCars</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\..\..\OneDrive\Desktop\for work\QRCodeDLL\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WebCam_Capture">
+      <HintPath>..\..\..\..\OneDrive\Desktop\for work\WebCam_Capture\WebCam_Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminProfile.Designer.cs">
+      <DependentUpon>AdminProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSystemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSystemView.Designer.cs">
+      <DependentUpon>AdminSystemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookSlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookSlot.Designer.cs">
+      <DependentUpon>BookSlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CarHistory.Designer.cs">
+      <DependentUpon>CarHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseManagement.cs" />
+    <Compile Include="EmployeeInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeInformation.Designer.cs">
+      <DependentUpon>EmployeeInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewEmployee.Designer.cs">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUser.Designer.cs">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PakingSlot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PakingSlot.Designer.cs">
+      <DependentUpon>PakingSlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkingDetailsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkingDetailsWindow.Designer.cs">
+      <DependentUpon>ParkingDetailsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileSettingForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfileSettingForAdmin.Designer.cs">
+      <DependentUpon>ProfileSettingForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfileSettings.Designer.cs">
+      <DependentUpon>ProfileSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemView.Designer.cs">
+      <DependentUpon>SystemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleHistory.Designer.cs">
+      <DependentUpon>VehicleHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewUsers.Designer.cs">
+      <DependentUpon>ViewUsers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminProfile.resx">
+      <DependentUpon>AdminProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSystemView.resx">
+      <DependentUpon>AdminSystemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookSlot.resx">
+      <DependentUpon>BookSlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarHistory.resx">
+      <DependentUpon>CarHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeInformation.resx">
+      <DependentUpon>EmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewEmployee.resx">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUser.resx">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PakingSlot.resx">
+      <DependentUpon>PakingSlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParkingDetailsWindow.resx">
+      <DependentUpon>ParkingDetailsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileSettingForAdmin.resx">
+      <DependentUpon>ProfileSettingForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileSettings.resx">
+      <DependentUpon>ProfileSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SystemView.resx">
+      <DependentUpon>SystemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleHistory.resx">
+      <DependentUpon>VehicleHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewUsers.resx">
+      <DependentUpon>ViewUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Parking_751082.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sed-02_2232585.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Parking_2_753118 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Parking_2_753118 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewmemebrzzss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-male-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
